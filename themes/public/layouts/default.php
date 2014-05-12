@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Bootstrap 101 Template</title>
+		<title>Public Theme</title>
 
 		<!-- Bootstrap -->
 		<?php echo Asset::css('bootstrap.min.css'); ?>
@@ -73,8 +73,9 @@
 			</div>
 		</div>
 
-	
-		<!-- Include jQuery and Bootstrap js -->
-		<?php echo Asset::js(array('jquery-1.11.1.min.js', 'bootstrap.min.js')); ?>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<?php echo Asset::js('bootstrap.min.js'); ?>
 	</body>
 </html>
