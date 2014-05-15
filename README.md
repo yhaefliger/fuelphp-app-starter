@@ -11,7 +11,7 @@ I think this is a good start point for person who are interested in developping 
 
 ##Installation
 
-Download this repository [https://github.com/yhaefliger/fuelphp-app-starter/archive/master.zip](zip archive) or from github clone.
+Download this repository Download this repository [zip archive](https://github.com/yhaefliger/fuelphp-app-starter/archive/master.zip) or from github clone. or from github clone.
 
 if you're on a linux/mac system check the permissions on folders:
 ``` 
