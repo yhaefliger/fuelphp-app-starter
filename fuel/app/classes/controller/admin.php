@@ -5,12 +5,12 @@
  * Admin Controller
  * Shared functions for all admin controllers
  *
- * @package    FuelAppStarter
- * @extends	   Controller_Base
- * @version    0.1
- * @author     YHA
- * @license    MIT License
- * @link	   https://github.com/yhaefliger/fuelphp-app-starter
+ * @package		FuelAppStarter
+ * @extends		Controller_Base
+ * @version		0.1
+ * @author		YHA
+ * @license		MIT License
+ * @link		https://github.com/yhaefliger/fuelphp-app-starter
  */
 
 class Controller_Admin extends Controller_Base
