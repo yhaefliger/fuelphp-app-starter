@@ -61,7 +61,7 @@ public function action_install(){
 
 Like from command line change admin by your desired username, password and email.
 
-Call it from http://path-to-your-app/special/install, it should display 1. If so **REMOVE THIS ACTION FROM YOUR CONTROLLER**.
+Call it from `http://path-to-your-app/special/install`, it should display `1`. If so **REMOVE THIS ACTION FROM YOUR CONTROLLER**.
 
 
 
