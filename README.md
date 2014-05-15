@@ -22,9 +22,9 @@ php oil refine install
     Made writable: APPPATH/config
 ```
 
-configure your db settings in *fuel/app/config/development/db.php*
+configure your db settings in `fuel/app/config/development/db.php`
 
-also make sure to put new random salts in *fuel/app/config/auth.php* and *fuel/app/config/simpleauth.php*
+also make sure to put new random salts in `fuel/app/config/auth.php` and `fuel/app/config/simpleauth.php`
 
 ##DB Structure + Admin
 
@@ -47,10 +47,10 @@ of course change admin with your admin username, password and email as you want.
 
 ###If you don't have access to php from command line
 
-You can still install DB structure from the sql file in the *sql* folder.
+You can still install DB structure from the sql file in the `sql` folder.
 Then you will need to add a temp action in the controller that will create the first user, because passwords are encrypted with your new salt it cant be created directly from mysql.
 
-In your */fuel/app/classes/controller/special.php* class add the function:
+In your `/fuel/app/classes/controller/special.php` class add the function:
 
 ```
 public function action_install(){
@@ -61,7 +61,7 @@ public function action_install(){
 
 Like from command line change admin by your desired username, password and email.
 
-Call it from http://path-to-your-app/special/install, it should display 1. If so *REMOVE THIS ACTION FROM YOUR CONTROLLER*.
+Call it from http://path-to-your-app/special/install, it should display 1. If so **REMOVE THIS ACTION FROM YOUR CONTROLLER**.
 
 
 
