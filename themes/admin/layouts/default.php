@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin Theme</title>
+    <title>Admin - <?php echo Config::get('app.name', 'App'); ?></title>
 
     <!-- Bootstrap -->
     <?php echo Asset::css('bootstrap.min.css'); ?>
@@ -36,7 +36,9 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand <?php echo isset($selected_menu) && $selected_menu == 'dashboard' ? 'active':''; ?>" href="<?php echo Uri::create('admin'); ?>">Project name</a>
+					<a class="navbar-brand <?php echo isset($selected_menu) && $selected_menu == 'dashboard' ? 'active':''; ?>" href="<?php echo Uri::create('admin'); ?>">
+						<?php echo Config::get('app.name', 'App'); ?>
+					</a>
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">

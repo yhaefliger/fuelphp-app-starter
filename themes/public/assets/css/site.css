@@ -19,9 +19,7 @@ body {
 .navbar-sep{
     padding:15px 5px;
 }
-.navbar-default .navbar-nav.navbar-right>li>a{
-    padding: 15px 5px;
-}
+
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
@@ -42,6 +40,14 @@ code {
     font-size: 80%;
 }
 
+/* NOT SMALL DEVICE */
+@media (min-width: 768px) {
+    .navbar-default .navbar-nav.navbar-right>li>a{
+        padding: 15px 5px;
+    }
+}
+
+/* SMALL DEVICES ONLY */
 @media (max-width: 767px) { 
     .navbar-sep{
         display: none !important;

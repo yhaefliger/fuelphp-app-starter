@@ -5,7 +5,14 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Public Theme</title>
+		<title>
+			<?php if(isset($page_title) && $page_title != ''){ ?>
+				<?php echo $page_title; ?>
+			<?php }elseif(isset($title) && $title != ''){ ?>
+				<?php echo $title; ?>
+			<?php } ?>
+			&nbsp;-&nbsp;<?php echo Config::get('app.name', 'App'); ?>
+		</title>
 
 		<!-- Bootstrap -->
 		<?php echo Asset::css('bootstrap.min.css'); ?>
@@ -30,7 +37,9 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="<?php echo Uri::create('/'); ?>">Project name</a>
+					<a class="navbar-brand" href="<?php echo Uri::create('/'); ?>">
+						<?php echo Config::get('app.name', 'App'); ?>
+					</a>
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
