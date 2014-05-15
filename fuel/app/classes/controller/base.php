@@ -22,7 +22,13 @@ class Controller_Base extends Controller
     {
         // load the theme template
         $this->theme = Theme::instance();
-
+		
+		//set the current user model to template if logged in
+		$this->current_user = false;
+		if(Auth::check()){
+			$this->current_user = Model_User::find(Auth::get('id'));
+		}
+		
 	}
 	
     /**

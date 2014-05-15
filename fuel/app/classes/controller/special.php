@@ -33,4 +33,6 @@ class Controller_Special extends Controller_Public
 		$this->theme->get_template()->set('title', '404 - Not Found');
 		$this->theme->set_partial('content', 'special/404');
 	}
+
+
 }

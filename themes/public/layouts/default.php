@@ -30,25 +30,33 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Project name</a>
+					<a class="navbar-brand" href="<?php echo Uri::create('/'); ?>">Project name</a>
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#contact">Contact</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-								<li class="divider"></li>
-								<li class="dropdown-header">Nav header</li>
-								<li><a href="#">Separated link</a></li>
-								<li><a href="#">One more separated link</a></li>
-							</ul>
+						<!-- TODO YOUR SITE NAVIGATION -->
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="navbar-sep">
+							<span class="glyphicon glyphicon-user"></span>
 						</li>
+						<?php if(Auth::check()){ ?>
+						<li>
+							<?php echo Html::anchor('profile', 'Profile'); ?>
+						</li>
+						<li class="navbar-sep">|</li>
+						<li>
+							<?php echo Html::anchor(Router::get('logout'), 'Logout ('.Auth::get_screen_name().')'); ?>
+						</li>
+						<?php }else{ ?>
+						<li>
+							<?php echo Html::anchor(Router::get('login'), 'Login'); ?>
+						</li>
+						<li class="navbar-sep">|</li>
+						<li>
+							<?php echo Html::anchor(Router::get('register'), 'Register'); ?>
+						</li>
+						<?php } ?>
 					</ul>
 				</div><!--/.nav-collapse -->
 			</div>
@@ -61,7 +69,9 @@
 					<h1><?php echo $title; ?></h1>
 				</div>
 			<?php } ?>
-
+			
+			<?php echo $theme->view('elements/notifications')->render(); ?>
+			
 			<?php if (isset($partials['content'])) { ?>
 				<?php echo $partials['content']; ?>
 			<?php } ?>

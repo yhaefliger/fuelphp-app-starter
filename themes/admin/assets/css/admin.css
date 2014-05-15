@@ -1,0 +1,7 @@
+body{
+	padding-top:65px;
+}
+.navbar-inverse .navbar-brand.active, .navbar-inverse .navbar-brand:hover,  .navbar-inverse .navbar-brand:focus{
+	background-color:#000;
+	color: #fff;
+}

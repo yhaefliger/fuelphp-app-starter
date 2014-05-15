@@ -178,6 +178,7 @@ return array(
 			'Fuel\\Core\\Response',
 			'Fuel\\Core\\View',
 			'Fuel\\Core\\ViewModel',
+			'Fuel\\Core\\Validation',
 			'Closure',
 		),
 	),
@@ -298,7 +299,9 @@ return array(
 		 * add it like 'session' => 'auth'.
 		 * If you don't want the config in a group use null as groupname.
 		 */
-		// 'config'  => array(),
+		'config'  => array(
+			'app' => 'app',	//example specific application configs
+		),
 
 		/**
 		 * Language files to autoload

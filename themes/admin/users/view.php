@@ -1,0 +1,1 @@
+<?php Debug::dump($user); ?>
