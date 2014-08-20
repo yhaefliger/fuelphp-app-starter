@@ -32,7 +32,7 @@ also make sure to put new random salts in `fuel/app/config/auth.php` and `fuel/a
 
 In the root of your application launch from terminal:
 ```
-php oil migrate
+php oil refine migrate
 ```
 
 then to create the admin
